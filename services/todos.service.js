@@ -15,9 +15,12 @@ module.exports = new (class TodosService {
     return this.todos.create(payload);
   }
   deleteTodosById({ _id }) {
-    return this.todos.remove(_id);
+    return this.todos.findByIdAndDelete(_id);
   }
-  deleteTodos(){
-    return this.todos.deleteMany({})
+  deleteTodos() {
+    return this.todos.deleteMany({});
+  }
+  update({ _id }) {
+    return this.todos.updateOne(_id);
   }
 })();

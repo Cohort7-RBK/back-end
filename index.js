@@ -3,8 +3,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const app = express();
 const userRoute = require("./routes/user.route.js");
+const app = express();
+const todosRoute = require("./routes/todos.route.js");
 const loginRoute = require("./routes/login.route.js");
 
 mongoose
@@ -23,7 +24,7 @@ mongoose
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-
+app.use("/api/task", todosRoute);
 app.use("/api/user", userRoute);
 
 app.use("/api/login", loginRoute);
