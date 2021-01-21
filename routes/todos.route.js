@@ -1,16 +1,16 @@
 const router = require("express").Router();
 const todosController = require("../controllers/todos.controller.js");
 //get All tasks
-router.get("/tasks", todosController.getTodos);
+router.get("/", todosController.getTodos);
 // add task
-router.post("/task", todosController.addTodos);
+router.post("/", todosController.addTodos);
 //get single task
-router.get("task/:_id", todosController.getTodosById);
+router.get("/:_id", todosController.getTodosById);
 //delete task
-router.delete('/task/:id',)
+router.delete("/:_id", todosController.deleteTodosById);
 //delete all
-router.delete('/tasks')
+router.delete("/", todosController.deleteTodos);
 //updtate task
-router.put('/task/:id')
+router.put("/:id", todosController.updateTodosById);
 
 module.exports = router;
