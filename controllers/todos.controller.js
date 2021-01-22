@@ -46,7 +46,6 @@ module.exports = {
     }
   },
   async deleteTodosById(req, res, next) {
-    console.log(req.body);
     try {
       const deleteTodosById = await todosService.deleteTodosById(req.params);
       res.send(deleteTodosById);
