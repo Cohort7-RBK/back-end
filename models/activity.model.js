@@ -3,15 +3,18 @@ const ActivitySchema = new mongoose.Schema({
   acitvityName: {
     type: String
   },
+  description: {
+    type: String
+  },
   date: {
-    type: date
+    type: Date
   },
   hour: {
     type: String
   },
   student: [
     {
-      sid: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "student"
     }
   ]
