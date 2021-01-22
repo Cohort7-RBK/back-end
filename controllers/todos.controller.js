@@ -23,6 +23,7 @@ module.exports = {
   },
 
   async addTodos(req, res, next) {
+    console.log(req.body);
     var newTodo = new TaskModel({
       text: req.body.text,
       idDone: req.body.isDone

@@ -24,7 +24,9 @@ mongoose
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
 app.use("/api/task", todosRoute);
+
 app.use("/api/user", userRoute);
 
 app.use("/api/login", loginRoute);
