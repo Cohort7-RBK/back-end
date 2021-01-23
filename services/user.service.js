@@ -24,8 +24,8 @@ module.exports = new (class UserService {
     return this.user.find();
   }
 
-  getUserById({_id}) {
-    return this.user.findById(_id)
+  getUserById({ _id }) {
+    return this.user.findById(_id);
   }
 
   addUser(payload) {

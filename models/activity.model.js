@@ -11,7 +11,7 @@ const ActivitySchema = new mongoose.Schema({
   },
   student: [
     {
-      sid: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "student"
     }
   ]

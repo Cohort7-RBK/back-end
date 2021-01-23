@@ -18,6 +18,6 @@ const gradeSchema = new mongoose.Schema({
   avr: Number
 });
 
-const gradeModel = mongoose.model("grade", gradesSchema);
+const gradeModel = mongoose.model("grade", gradeSchema);
 
 module.exports = gradeModel;
