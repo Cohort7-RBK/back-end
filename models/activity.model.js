@@ -3,8 +3,11 @@ const ActivitySchema = new mongoose.Schema({
   acitvityName: {
     type: String
   },
+  description: {
+    type: String
+  },
   date: {
-    type: date
+    type: Date
   },
   hour: {
     type: String

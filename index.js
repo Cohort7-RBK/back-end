@@ -5,6 +5,11 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 const userRoute = require("./routes/user.route.js");
+
+const announcementRoute = require("./routes/announcement.route.js");
+
+const activityRoute = require("./routes/activity.route.js");
+
 const loginRoute = require("./routes/login.route.js");
 const coursesRoute = require("./routes/courses.route.js");
 const studentRoute = require("./routes/student.route.js");
@@ -36,6 +41,11 @@ app.use(cors());
 
 app.use("/api/user", userRoute);
 
+app.use("/api/announcement", announcementRoute);
+
+app.use("/api/activity", activityRoute);
+
+
 app.use("/api/login", loginRoute);
 app.use("/api/courses", coursesRoute);
 app.use("/api/grade", gradeRoute);
@@ -50,6 +60,7 @@ app.use("/api/teacher", teacherRoute);
 app.use("/api/class", classRoute);
 
 app.use("/api/admin", adminRoute);
+
 
 const PORT = process.env.PORT || 3030;
 
