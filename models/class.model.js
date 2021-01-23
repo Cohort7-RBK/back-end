@@ -3,18 +3,22 @@ const classSchema = new mongoose.Schema({
   name: {
     type: String
   },
-  course: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "course"
-  }],
+  course: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "course",
+      default: []
+    }
+  ],
   student: [
     {
-      sid: mongoose.Schema.Types.ObjectId,
-      ref: "student"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "student",
+      default: []
     }
   ]
 });
 
-const classModel = mongoose.model("class", classsSchema);
+const classModel = mongoose.model("class", classSchema);
 
 module.exports = classModel;
