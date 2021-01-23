@@ -11,6 +11,7 @@ const announcementRoute = require("./routes/announcement.route.js");
 const activityRoute = require("./routes/activity.route.js");
 
 const loginRoute = require("./routes/login.route.js");
+const coursesRoute = require("./routes/courses.route.js");
 const studentRoute = require("./routes/student.route.js");
 const teacherRoute = require("./routes/teacher.route.js");
 const classRoute = require("./routes/class.route.js");
@@ -36,6 +37,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+
+
 app.use("/api/user", userRoute);
 
 app.use("/api/announcement", announcementRoute);
@@ -44,6 +47,7 @@ app.use("/api/activity", activityRoute);
 
 
 app.use("/api/login", loginRoute);
+app.use("/api/courses", coursesRoute);
 app.use("/api/grade", gradeRoute);
 
 app.use("/api/schedule", scheduleRoute);
